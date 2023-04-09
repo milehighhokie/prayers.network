@@ -2,16 +2,117 @@
 <html>
 <head>
 	<title>Prayer Website</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+
+	<title>Prayer Website</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f5f5f5;
+		}
+
+		header {
+			font-family: 'Pacifico', cursive;
+			background-color: #10846f;
+			color: #ffffff;
+			padding: 20px;
+			font-size: 20px;
+			display: flex;
+			display: flex;
+  			align-items: center;
+		}
+
+		h1 {
+			margin: 0;
+		}
+
+		header a {
+			margin-left: 50px;
+			font-family: 'Delicious Handrawn', cursive;
+			color: #ffffff;
+			font-size: 30px;
+		}
+
+		header a:hover {
+			color:#09344c;
+		}
+
+		main {
+			margin: 20px;
+			padding: 20px;
+			background-color: #fff;
+			box-shadow: 0 0 5px #999;
+			border-radius: 5px;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		label {
+			margin-right: 10px;
+		}
+
+		select, input[type="text"], input[type="submit"] {
+			font-size: 18px;
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			margin-bottom: 10px;
+			width: 300px;
+			box-sizing: border-box;
+			text-align: center;
+		}
+
+		input[type="submit"] {
+			background-color: #5a8057;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+			margin: 0;
+			text-align: center;
+			padding: 10px 200px;
+			display: block;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #085e0e;
+			text-align: center;
+		}
+
+		footer {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+
+		.reg-text {
+			color: #0f557b;
+			margin: 15px;
+		}
+
+	</style>
 </head>
 <body>
 	<header>
 		<h1>Prayer Website</h1>
+		<a href="index.html">Home</a>
+		<a href="read.php">Read Prayer</a>
 	</header>
 	<main>
-
-		<p>WRITE PAGE</p>
-		<form action="store.php" method="POST">
-			<label for="who">Choose a person/people:</label>
+		<form action="store.php" method="post">
+			<div class="reg-text"><label for="who"><b>Choose a person/people:</b></label></div>
 			<select id="who" name="who" onchange="checkSelection()">
 				<option value="none">-----</option>
 				<option value="me">Me</option>
@@ -26,17 +127,16 @@
 				<option value="suffering">People Suffering</option>
 				<option value="sick">The Sick</option>
 				<option value="homeless">Homeless</option>
-				<option value="hcw">Health Care Workers</option>
+				<option value="hcw">Healthcare Workers</option>
 				<option value="firstResp">First Responders</option>
 				<option value="world">The World</option>
 				<option value="other">Other</option>
 			</select>
 			<input type="text" id="otherOption" name="otherOption" style="display:none;">
 			<br>
-			<label for="message">Message:</label>
+			<div class="reg-text"><label for="message"><b>Message:</b></label></div>
 			<input type="text" id="messageText" name="messageText">
 			<input type="submit">
-			
 		</form>
 		  
 		<script>
@@ -60,10 +160,10 @@
 						messageText.value = "I pray for my family";
 						break;
 					case "child":
-						messageText.value = "I pray for my child/children";
+						messageText.value = "I pray for my child(ren)";
 						break;
 					case "grandchild":
-						messageText.value = "I pray for my grandchild/grandchildren";
+						messageText.value = "I pray for my grandchild(ren)";
 						break;
 					case "sigOther":
 						messageText.value = "I pray for my significant other";
@@ -90,7 +190,7 @@
 						messageText.value = "I pray for the homeless";
 						break;
 					case "hcw":
-						messageText.value = "I pray for the health care workers";
+						messageText.value = "I pray for the healthcare workers";
 						break;
 					case "firstResp":
 						messageText.value = "I pray for the first responders";
@@ -110,7 +210,7 @@
 				</script>
 			</main>
 			<footer>
-				<p>© 2023 Prayer Website</p>
+				<p>&copy; 2023 Prayer Website</p>
 			</footer>
 		</body>
 </html>

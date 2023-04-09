@@ -2,17 +2,116 @@
 <html>
 <head>
 	<title>Prayer Website</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+	<style>
+		body {
+			background-color: #f5f5f5;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			font-family: 'Pacifico', cursive;
+			background-color: #10846f;
+			color: #ffffff;
+			padding: 20px;
+			font-size: 20px;
+			display: flex;
+			display: flex;
+  			align-items: center;
+		}
+
+		h1 {
+			margin: 0;
+		}
+
+		header a {
+			margin-left: 50px;
+			font-family: 'Delicious Handrawn', cursive;
+			color: #ffffff;
+			font-size: 30px;
+		}
+		
+		header a:hover {
+			color:#09344c;
+		}
+
+		main {
+			display: flex;
+			flex-direction: center;
+			align-items: center;
+			justify-content: left;
+			height: 80px;
+		}
+
+		.button-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 25px 10px 10px 10px;
+		}
+
+		.button {
+			background-color: #5a8057;
+			border: none;
+			color: #ffffff;
+			font-size: 20px;
+			padding: 10px 100px;
+			margin: 10px 20px 10px 20px;
+			text-decoration:none;
+			text-align: center;
+			cursor: pointer;
+			border-radius: 10px;
+		}
+
+		.button:hover {
+			background-color: #085e0e;
+		}
+
+		.abt-title {
+			color: #0f557b;
+			padding: 20px;
+			font-size: 18px;
+			text-align: left;
+			font-family: 'Delicious Handrawn', cursive;
+		}
+
+		footer {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+
+	</style>
 </head>
 <body>
 	<header>
 		<h1>Prayer Website</h1>
+		<a href="write.html">Write Prayer</a>
+		<a href="read.php">Read Prayer</a>
 	</header>
 	<main>
-		<button><a href="write.html">Write Prayer</a></button>
-		<button><a href="read.html">Read Prayer</a></button>
+		<div class="button-container">
+			<b><a href="write.html" class="button">Write Prayer</a>
+			<a href="read.php" class="button">Read Prayer</a></b>
+		</div>
 	</main>
-		<footer>
+	<body>
+		<div class="abt-title">	
+			<h1>About Us</h1>
+		</div>
+	</body>
+	<footer>
 		<p>&copy; 2023 Prayers Website. All rights reserved.</p>
 	</footer>
-	</body>
+</body>
 </html>
