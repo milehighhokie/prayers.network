@@ -148,25 +148,26 @@
                   ,prayersReadCount
                   ) VALUES ("'
                   . $_POST['messageText'] .'","'
-                  .date("Ymd").'",1)';
-              
+                  .date("Ymd").'",0)';
+              }
 
-              $link = mysqli_connect("localhost", "milehigh_prayers", "1234userPRAYERS", "milehigh_prayers"); 
-                
-              if ($link == false) { 
-                die("ERROR: Could not connect. "
-                      .mysqli_connect_error()); 
-              } 
+          $link = mysqli_connect("localhost", "milehigh_prayers", "1234userPRAYERS", "milehigh_prayers"); 
+            
+          if ($link == false) { 
+            die("ERROR: Could not connect. "
+                  .mysqli_connect_error()); 
+          } 
           
               if($link->query($isql) === TRUE)
               {
                 echo "<br> New prayer created successfully. ";
-                echo '<br> Thank you for your prayer!!';
               } else {
                 echo "<br> Error: ".$isql."<br>".$link->error;
-              }
-          }    
-
+  }    
+                
+            echo 'Thank you for your prayer!!';
+          
+      //}
   ?>
 </main>
 

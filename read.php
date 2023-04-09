@@ -133,7 +133,7 @@
 		?>
 	</main>
 	<footer>
-		<p>&copy; 2023 Prayers Website. All rights reserved.</p>
+		<p>&copy; 2023 The Prayers Network. All rights reserved.</p>
 	</footer>
 </body>
 </html>
