@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prayer Website</title>
+</head>
+<body>
+	<header>
+		<h1>Prayer Website</h1>
+	</header>
+	<main>
+
+		<p>WRITE PAGE</p>
+		<form action="store.php" method="POST">
+			<label for="who">Choose a person/people:</label>
+			<select id="who" name="who" onchange="checkSelection()">
+				<option value="none">-----</option>
+				<option value="me">Me</option>
+				<option value="family">Family</option>
+				<option value="child">Child/Children</option>
+				<option value="grandchild">Grandchild/Grandchildren</option>
+				<option value="sigOther">Significant Other</option>
+				<option value="parents">Parent(s)</option>
+				<option value="grandparents">Grandparent(s)</option>
+				<option value="neighbors">Neighbor(s)</option>
+				<option value="elected">Elected Official(s)</option>
+				<option value="suffering">People Suffering</option>
+				<option value="sick">The Sick</option>
+				<option value="homeless">Homeless</option>
+				<option value="hcw">Health Care Workers</option>
+				<option value="firstResp">First Responders</option>
+				<option value="world">The World</option>
+				<option value="other">Other</option>
+			</select>
+			<input type="text" id="otherOption" name="otherOption" style="display:none;">
+			<br>
+			<label for="message">Message:</label>
+			<input type="text" id="messageText" name="messageText">
+			<input type="submit">
+			
+		</form>
+		  
+		<script>
+			function checkSelection() {
+				var select = document.getElementById("who");
+				var selectedOption = select.options[select.selectedIndex].value;
+				var otherOptionInput = document.getElementById("otherOption");
+				var messageText = document.getElementById("messageText");
+				
+				if (selectedOption === "other") {
+					otherOptionInput.style.display = "block";
+				} else {
+					otherOptionInput.style.display = "none";
+				}
+				
+				switch (selectedOption) {
+					case "me":
+						messageText.value = "I pray for myself";
+						break;
+					case "family":
+						messageText.value = "I pray for my family";
+						break;
+					case "child":
+						messageText.value = "I pray for my child/children";
+						break;
+					case "grandchild":
+						messageText.value = "I pray for my grandchild/grandchildren";
+						break;
+					case "sigOther":
+						messageText.value = "I pray for my significant other";
+						break;
+					case "parents":
+						messageText.value = "I pray for my parent(s)";
+						break;
+					case "grandparents":
+						messageText.value = "I pray for my grandparent(s)";
+						break;
+					case "neighbors":
+						messageText.value = "I pray for my neighbor(s)";
+						break;
+					case "elected":
+						messageText.value = "I pray for my elected official(s)";
+						break;
+					case "suffering":
+						messageText.value = "I pray for people who are suffering";
+						break;
+					case "sick":
+						messageText.value = "I pray for the sick";
+						break;
+					case "homeless":
+						messageText.value = "I pray for the homeless";
+						break;
+					case "hcw":
+						messageText.value = "I pray for the health care workers";
+						break;
+					case "firstResp":
+						messageText.value = "I pray for the first responders";
+						break;
+					case "world":
+						messageText.value = "I pray for the world";
+						break;
+					case "other":
+						var otherOptionValue = document.getElementById("otherOption").value;
+						messageText.value = "I pray for " + otherOptionValue;
+						break;
+					default:
+						messageText.value = "";
+						break;
+					}
+				}
+				</script>
+			</main>
+			<footer>
+				<p>© 2023 Prayer Website</p>
+			</footer>
+		</body>
+</html>
